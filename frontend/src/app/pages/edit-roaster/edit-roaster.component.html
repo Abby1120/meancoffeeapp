@@ -1,0 +1,12 @@
+<header class="hero is-flex">
+    <div class="box">
+       <h2 class="title is-4">Update Roaster Name
+       </h2>
+       <input #roasterTitleInput class="input has-background-light" type="text" placeholder="Update Roaster">
+       <br><br>  
+       <div class="buttons is-right">
+         <button class="button" routerLink="/">Cancel</button>
+         <button class="button is-primary has-text-white" (click)="updateRoaster(roasterTitleInput.value)">Save</button>
+    </div>
+    </div>
+   </header>

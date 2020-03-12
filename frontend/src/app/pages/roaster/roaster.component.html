@@ -1,0 +1,42 @@
+<header class="hero">
+    <app-header></app-header>
+    <div class="box">
+        <div class="roasters">
+            
+            <div class="roastername has-text-centered">
+                <h2 class="title is-2">Welcome</h2>
+                <a class="roastertext" *ngFor="let name of roaster" [routerLink]="['/roaster', name._id]" routerLinkActive="is-active">
+                  <p>{{ name.title }}!</p>
+                </a>
+            </div>
+            <div class="buttons is-marginless">
+                <button class="button is-fullwidth is-link is-inverted is-small" routerLink="/new-roaster">Add Your Business Name</button>
+                <button class="button is-fullwidth is-link is-inverted is-small" [routerLink]="['/edit-roaster', selectedRoasterId]">Edit Business Name</button>
+            </div>   
+                <p>Add your coffee to allow users to search for a cup of your Joe.</p>
+            <div class="buttons is-centered">
+                <button class="button is-success is-small" routerLink="./new-coffee">Add Coffee</button>
+                <button class="button is-danger is-small" (click)="onDeleteRoasterClick()">Delete Acct</button>
+            </div>
+        </div>
+    
+        <div class="coffees">
+            <h3 class="title is-3">Y 'ARGHH Coffee Roasts</h3>
+            <div class="new-coffee" *ngFor="let coffee of coffee">
+               <div class="coffee-text">
+                <p>{{ coffee.title }}</p>
+              </div>
+              <div class="buttons forc">
+                  <button class="button is-warning" [routerLink]="['/roaster', selectedRoasterId, 'edit-coffee', coffee._id]">
+                    <a><fa-icon icon="edit"></fa-icon></a>
+                  </button>
+                  <button class="button is-danger" (click)="onDeleteCoffeeClick(coffee._id)">
+                    <a><fa-icon icon="trash"></fa-icon></a>
+                  </button>
+              </div>
+            </div>
+            <h3 class="empty-state-text" *ngIf="coffee.length === 0">There are no coffees here! Click the add button to create
+              a new coffee.</h3>
+        </div>
+    </div>
+</header>

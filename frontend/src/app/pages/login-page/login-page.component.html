@@ -1,0 +1,23 @@
+<div class="hero">
+    <app-header></app-header>
+    <div class="box centered">
+  
+      <h1 class="title has-text-primary">LOGIN</h1>
+      
+      <div class="field">
+          <input #emailInput class="input has-background-light" type="email" placeholder="Email">
+      </div>
+      <div class="field">
+          <input #pwInput class="input has-background-light" type="password" placeholder="Password">
+      </div>
+      <div class="field">
+          <button class="button is-success is-fullwidth has-text-white" (click)="onLoginButtonClicked(emailInput.value, pwInput.value)">
+            LOGIN
+          </button>
+      </div>
+      <br>
+  
+      <p class="has-text-grey">No Account? <a routerLink="/signup">Sign up</a> now!</p>
+  
+    </div>
+  </div>

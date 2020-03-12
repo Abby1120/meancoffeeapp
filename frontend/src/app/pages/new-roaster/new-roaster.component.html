@@ -1,0 +1,12 @@
+<header class="hero is-flex">
+ <div class="box">
+    <h2 class="title is-4">Create New Roaster
+    </h2>
+    <input #roasterTitleInput class="input has-background-light" type="text" placeholder="Create New Roaster">
+    <br><br>  
+    <div class="buttons is-right">
+      <button class="button" (click)="backClicked()">Cancel</button>
+      <button class="button is-primary has-text-white" (click)="createRoaster(roasterTitleInput.value)">Create</button>
+ </div>
+ </div>
+</header>

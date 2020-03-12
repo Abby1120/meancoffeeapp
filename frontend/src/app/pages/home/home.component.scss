@@ -1,0 +1,99 @@
+@import '../../../styles.scss';
+
+.hero {
+  height: auto;
+}
+
+.intro {
+  padding: 3%;
+  align-items: center; 
+}
+
+/* x-marks the spot logo */
+.is-half {
+  h1 {
+    font-family: $fonttitle;
+    text-shadow: 4px 4px 3px rgb(133, 63, 23);
+    font-size: 4rem;
+    letter-spacing: 7px;
+  }
+  .logox {
+    width: 70%;
+    max-width: 220px;
+    margin: auto;
+  }
+  .short-rule {
+    height: 4px;
+    margin: 20px auto;
+    width: 50px;
+  }
+  .slogan {
+    font-family: $fonttwo;
+    font-size: 1.5em;
+    font-style: italic;
+    color: white;
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.75);
+    padding-bottom: 2%;
+ }
+} 
+
+.phone {
+    width: 100%;
+    max-width: 450px;
+}
+
+#about{
+.sectit {
+  font-family: $fonttwo;
+  letter-spacing: 1px;
+}
+
+.column {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  h3{
+    margin-bottom: 10px;
+    font-family: $fontone;
+  }
+  .middle {
+    margin-bottom: 35px;
+  }
+  .edc {
+    width: 30%;
+    margin: 0 0 20px;
+  }
+}
+}
+
+.footer {
+  padding: 3rem 2rem 6rem;
+  .columns {
+    justify-content: space-evenly;
+    .column {
+      width: 100%;
+      max-width: 300px;
+      padding-top: 3%;
+      margin-bottom: 7%;
+      h1 {
+        font-family: $fonttitle;
+        text-shadow: 4px 4px 3px rgb(133, 63, 23);
+        font-size: 2.4em;
+        letter-spacing: 5px;
+      }
+      ul {
+        list-style-type: none;
+        li a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+
+  

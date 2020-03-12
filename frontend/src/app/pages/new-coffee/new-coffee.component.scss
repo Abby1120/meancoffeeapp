@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+
+.hero {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: white;
+    min-height: 200px;
+    width: 40%;
+    min-width: 320px;
+}

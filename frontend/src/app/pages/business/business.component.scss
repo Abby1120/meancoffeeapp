@@ -1,0 +1,53 @@
+@import '../../../styles.scss';
+.hero {
+    height: 100vh;
+    @include breakpoint(baby-shark){
+        height: auto;
+      }
+}
+.flexcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.business-sec {
+    display: flex;
+    background: white;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 4% 0;
+}
+
+.content {
+    padding: 2%;
+    text-align: center;
+    width: 250px;
+    img {
+        height: 100px;
+        width: 100px;
+        margin-bottom: -1.5em;
+    }
+    h2 {
+        letter-spacing: 1px;
+        font-family: $fonttwo;
+    }
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+
+
+
+
+

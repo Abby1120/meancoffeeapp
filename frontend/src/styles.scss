@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+// breakpoints should be set at 600, 900 and 1200 1800 if you like large screens
+$tablet: 600px;
+$desktop: 700px;
+$navbar-padding-horizontal: .5rem;
+$navbar-padding-vertical: .2rem;
+$footer-background-color: rgb(0, 47, 108);
+$fontone: treasure map deadhand;
+$fonttwo: Vollkorn;
+$fonttitle: Rapscallion;
+
+// Media Queries
+
+@mixin breakpoint($point) {
+    @if $point == papa-shark {
+      @media (min-width: 1800px) { @content; }
+    }
+    @else if $point == mama-shark {
+      @media (max-width: 900px) { @content; }
+    }
+    @else if $point == baby-shark {
+      @media (max-width: 600px)  { @content; }
+    }
+  }
+
+@import url(//db.onlinewebfonts.com/c/865c36580d109facdc620f0e080878b4?family=Treasure+Map+Deadhand);
+@import url(//db.onlinewebfonts.com/c/766d679f3242fbf580362a9838c40083?family=Vollkorn);
+@import url(//db.onlinewebfonts.com/c/a9832257c016de39e36d9aae510c1fd3?family=Rapscallion);
+@import '../node_modules/bulma/bulma.sass';
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url("/./assets/img/treasuremap.jpg");
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menulink {
+    font-family: $fontone;
+    font-size: 1.7em;
+    color: white;
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.menulink::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid #fefefe;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.menulink:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
+
+.mobileview {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    background-color: #1B1F08;
+    font-family: $fonttwo;
+    padding: .2em 0;
+    a {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        transition: all .3s ease;
+        color: white;
+        font-size: 1em;
+    span {
+            display: block;
+            font-size: .6em;
+            font-family: $fonttwo; 
+        }
+    }
+    h1 {
+        font-size: 1.4em;
+        font-family: $fonttitle;
+        color: white;
+        text-shadow: 4px 4px 3px rgb(133, 63, 23);
+        padding: 0 .5em;
+    }
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 96%;
+    max-width: 500px;
+
+    .field {
+        width: 90%;
+    }
+}
+
+
+@media screen and (min-width:600px) and (max-width:699px){
+    .navbar {
+        display: flex;
+        font-size: .7em;
+    }
+    .navbar-start {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .mobileview {
+        display: none;
+    }
+}
+
+

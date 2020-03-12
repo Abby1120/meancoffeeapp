@@ -1,0 +1,12 @@
+<header class="hero is-flex">
+    <div class="box">
+       <h2 class="title is-4">Update Coffee Name
+       </h2>
+       <input #coffeeTitleInput class="input has-background-light" type="text" placeholder="Update Coffee">
+       <br><br>  
+       <div class="buttons is-right">
+         <button class="button" routerLink="/">Cancel</button>
+         <button class="button is-primary has-text-white" (click)="updateCoffee(coffeeTitleInput.value)">Save</button>
+    </div>
+    </div>
+   </header>

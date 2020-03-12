@@ -1,0 +1,12 @@
+<header class="hero is-flex">
+    <div class="box">
+       <h2 class="title is-4">Create New Coffee
+       </h2>
+       <input #coffeeTitleInput class="input has-background-light" type="text" placeholder="Create New Coffee">
+       <br><br>  
+       <div class="buttons is-right">
+         <button class="button" (click)="backClicked()">Cancel</button>
+         <button class="button is-primary has-text-white" (click)="createCoffee(coffeeTitleInput.value)">Create</button>
+    </div>
+    </div>
+   </header>
